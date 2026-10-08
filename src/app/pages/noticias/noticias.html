@@ -1,0 +1,27 @@
+<section class="news-shell">
+  <div class="news-topbar">
+    <div class="news-intro">
+      <h2>Últimas Noticias</h2>
+    </div>
+
+    <button class="favorite-button" type="button">★ Ver favoritos</button>
+  </div>
+
+  <div class="news-grid">
+    @for (noticia of noticias; track noticia.id) {
+      <article class="news-card">
+        <img [src]="noticia.imagen" [alt]="noticia.titulo" />
+        <div class="news-content">
+          <span class="pill">{{ noticia.categoria }}</span>
+          <h3>{{ noticia.titulo }}</h3>
+          <p>{{ noticia.resumen }}</p>
+          <div class="card-footer">
+            <a [routerLink]="['/detalle', noticia.id]">Leer más →</a>
+            <button class="bookmark-button" type="button" aria-label="Guardar favorito">★</button>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>
+

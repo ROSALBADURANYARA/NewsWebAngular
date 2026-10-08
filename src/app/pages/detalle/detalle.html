@@ -1,0 +1,72 @@
+@if (!noticia) {
+  <section class="empty-state">
+    <h2>Noticia no encontrada</h2>
+    <p>La historia que buscas no está disponible en este momento.</p>
+    <a routerLink="/noticias">Volver al listado</a>
+  </section>
+} @else {
+  <article class="article-page">
+    <div class="bread-crumbs">
+      <a routerLink="/noticias">Inicio</a>
+      <span>›</span>
+      <a routerLink="/noticias">Noticia</a>
+      <span>›</span>
+      <span>{{ noticia.categoria }}</span>
+    </div>
+
+    <div class="article-layout">
+      <div class="article-main">
+        <img class="article-image" [src]="noticia.imagen" [alt]="noticia.titulo" />
+
+        <div class="article-content">
+          <span class="pill">{{ noticia.categoria }}</span>
+          <h2>{{ noticia.titulo }}</h2>
+          <div class="meta-row">
+            <span>{{ noticia.autor }}</span>
+            <span>{{ noticia.fecha }}</span>
+          </div>
+
+          @for (parrafo of noticia.contenido; track parrafo) {
+            <p>{{ parrafo }}</p>
+          }
+        </div>
+      </div>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card info-card">
+          <div class="sidebar-label">Categoría</div>
+          <div class="sidebar-row">
+            <span class="sidebar-icon">📰</span>
+            <span>{{ noticia.categoria }}</span>
+          </div>
+
+          <div class="sidebar-label">Fecha de publicación</div>
+          <div class="sidebar-row">
+            <span class="sidebar-icon">🗓️</span>
+            <span>{{ noticia.fecha }}</span>
+          </div>
+
+          <div class="sidebar-label">Tiempo de lectura</div>
+          <div class="sidebar-row">
+            <span class="sidebar-icon">⏱️</span>
+            <span>15 minutos</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card share-card">
+          <h3>Compartir</h3>
+          <div class="share-row">
+            <button type="button" aria-label="Compartir en Facebook" (click)="compartir('facebook')">f</button>
+            <button type="button" aria-label="Compartir en LinkedIn" (click)="compartir('linkedin')">in</button>
+            <button type="button" aria-label="Compartir en X" (click)="compartir('x')">x</button>
+          </div>
+        </div>
+
+        <button class="favorite-button" type="button" [class.is-active]="isFavorita" (click)="toggleFavorito()">
+          {{ isFavorita ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }}
+        </button>
+      </aside>
+    </div>
+  </article>
+}
+

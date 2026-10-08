@@ -1,0 +1,30 @@
+<section class="contact-shell">
+  <div class="contact-card">
+    <h2>Contáctanos</h2>
+    <p class="subtitle">¿Tienes dudas o sugerencias? Escríbenos un mensaje.</p>
+
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="enviarMensaje()">
+      <label>
+        <span>Nombre</span>
+        <input type="text" name="nombre" [(ngModel)]="nombre" />
+      </label>
+
+      <label>
+        <span>Correo electrónico</span>
+        <input type="email" name="correo" [(ngModel)]="correo" />
+      </label>
+
+      <div class="validation-alert" aria-live="polite" *ngIf="!correo.includes('@')">
+        <span class="alert-icon">!</span>
+        <p>Incluye un signo “@” en la dirección de correo electrónico.</p>
+      </div>
+
+      <label>
+        <span>Mensaje</span>
+        <textarea name="mensaje" [(ngModel)]="mensaje"></textarea>
+      </label>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>

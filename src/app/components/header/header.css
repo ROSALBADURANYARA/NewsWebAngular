@@ -1,0 +1,52 @@
+.topbar {
+  width: 100%;
+  background: linear-gradient(180deg, #0d2d4d 0%, #0c2a48 100%);
+  color: #fff;
+  padding: 1.1rem 0 1.25rem;
+  text-align: center;
+}
+
+.brand-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-wrap h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 2.6vw, 3.7rem);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    gap: 1rem 1.3rem;
+  }
+}

@@ -1,59 +1,74 @@
-# NewsWebAngular
+# NewsWeb
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.1.
+Aplicación web funcional de noticias desarrollada con Angular 22. Incluye una landing page, listado de noticias, detalle de artículo y sección de contacto, con diseño responsive y estructura organizada para facilitar mantenimiento.
 
-## Development server
+## Cumple con la guía##
 
-To start a local development server, run:
+- Aplicación funcional completa
+- Implementación básica en Angular (componentes y binding)
+- Código organizado y documentado
+- Aplicación desplegable en GitHub Pages, Netlify o Vercel
 
-```bash
-ng serve
-```
+## Funcionalidades##
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Inicio con vista general de noticias destacadas
+- Página de noticias con listado completo
+- Detalle de cada noticia mediante parámetros de ruta
+- Enrutamiento con Angular Router
+- Componentes y bindings en Angular
+- Código organizado con servicios y datos centralizados
 
-## Code scaffolding
+## Requisitos##
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js 22+
+- npm
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Instalación
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Ejecución local
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+La aplicación queda disponible en:
 
-For end-to-end (e2e) testing, run:
+```text
+http://localhost:4200/ EL PUERTO QUE ESTE DISPONIBLE.
+```
+
+## Compilación
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Despliegue en GitHub Pages
 
-## Additional Resources
+Este repositorio incluye una configuración de despliegue en GitHub Actions en `.github/workflows/deploy.yml`.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pasos para desplegar:
+
+1. Subir el proyecto a GitHub.
+2. Activar GitHub Pages en Settings > Pages.
+3. Configurar el origen como "GitHub Actions".
+4. Hacer push a la rama `main`.
+
+La acción compilará la app y publicará la carpeta `dist/NewsWebAngular`.
+
+## Estructura relevante
+
+```text
+src/
+  app/
+    components/
+    pages/
+    data/
+    services/
+    app.routes.ts
+```
+

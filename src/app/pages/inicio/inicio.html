@@ -1,0 +1,44 @@
+<section class="hero-shell">
+  <div class="hero-visual" aria-label="Portada destacada">
+    <div class="floating-icons" aria-label="Acciones rápidas">
+      <button class="icon-button globe" type="button" aria-label="Globo">◌</button>
+      <button class="icon-button play" type="button" aria-label="Reproducir">▶</button>
+      <button class="icon-button chat" type="button" aria-label="Chat">◍</button>
+    </div>
+  </div>
+</section>
+
+<section class="headline-section">
+  <div class="headline-box">
+    <div class="headline-text">Mantente informado todos los días</div>
+    <div class="headline-subtext">Las noticias más recientes y de interés general en un solo lugar.</div>
+  </div>
+
+  <div class="hero-button-wrap">
+    <a class="cta" routerLink="/noticias">Explorar noticias</a>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="section-heading">
+    <h3>Últimas Noticias</h3>
+    <button class="favorite-button" type="button">★ Ver favoritos</button>
+  </div>
+
+  <div class="card-grid">
+    @for (noticia of noticiasDestacadas; track noticia.id) {
+      <article class="news-card featured-card">
+        <img [src]="noticia.imagen" [alt]="noticia.titulo" />
+        <div class="card-body">
+          <span class="pill">{{ noticia.categoria }}</span>
+          <h4>{{ noticia.titulo }}</h4>
+          <p>{{ noticia.resumen }}</p>
+          <div class="card-footer">
+            <a class="read-more" [routerLink]="['/detalle', noticia.id]">Leer más →</a>
+            <button class="bookmark-button" type="button" aria-label="Guardar favorito">★</button>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>
