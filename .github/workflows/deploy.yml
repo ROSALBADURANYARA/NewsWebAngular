@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-        path: ./dist/NewsWebAngular/browser
+          path: ./dist/NewsWebAngular/browser
 
   deploy:
     environment:
@@ -51,3 +51,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+``
