@@ -1,18 +1,16 @@
-.hero-shell {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .hero-visual {
   position: relative;
   min-height: 440px;
-  background: linear-gradient(90deg, rgba(7, 27, 66, 0.55), rgba(17, 82, 149, 0.2)), url('/img/Banner.jpg') center/cover no-repeat;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 27, 66, 0.55),
+    rgba(17, 82, 149, 0.2)
+  ),
+  url('img/Banner.jpg') center/cover no-repeat;
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
 }
-
 .hero-visual::before {
   content: "";
   position: absolute;
