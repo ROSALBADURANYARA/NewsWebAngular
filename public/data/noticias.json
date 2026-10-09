@@ -4,31 +4,31 @@
     "tag": "Tecnología",
     "titulo": "Avances de la Inteligencia Artificial",
     "resumen": "La inteligencia artificial continúa transformando la educación y la industria a nivel global.",
-    "img": "img/Tecnologia.jpg",
-    "texto": "La inteligencia artificial continúa transformando de manera radical tanto la educación como los diferentes sectores industriales a nivel global. Nuevos modelos de lenguaje y herramientas automatizadas permiten optimizar procesos complejos en cuestión de segundos, incrementando la productividad empresarial."
+    "img": "/NewsWebAngular/img/Tecnologia.jpg",
+    "texto": "..."
   },
   {
     "id": "educacion",
     "tag": "Educación",
     "titulo": "Educación Virtual",
     "resumen": "Nuevas metodologías digitales permiten acceder a una formación flexible y de calidad.",
-    "img": "img/Educacion.jpg",
-    "texto": "Las metodologías digitales han evolucionado para ofrecer experiencias de aprendizaje mucho más interactivas y accesibles. Las plataformas virtuales implementan simuladores y recursos multimedia que facilitan la comprensión técnica y permiten gestionar los horarios de estudio de manera autónoma."
+    "img": "/NewsWebAngular/img/Educacion.jpg",
+    "texto": "..."
   },
   {
     "id": "turismo",
     "tag": "Turismo",
     "titulo": "Turismo Sostenible",
     "resumen": "Destinos responsables con el medio ambiente que promueven experiencias únicas.",
-    "img": "img/Turismo.jpg",
-    "texto": "El sector turístico ha dado un giro importante hacia prácticas responsables con el medio ambiente. Los destinos locales promueven iniciativas de bajo impacto ecológico, conservación de reservas naturales y apoyo directo a las comunidades anfitrionas."
+    "img": "/NewsWebAngular/img/Turismo.jpg",
+    "texto": "..."
   },
   {
     "id": "comercio",
     "tag": "Comercio",
     "titulo": "Comercio Electrónico",
     "resumen": "Las compras en línea continúan creciendo gracias a la innovación tecnológica.",
-    "img": "img/Comercio.jpg",
-    "texto": "El comercio electrónico experimenta un crecimiento impulsado por pasarelas de pago más seguras, logística optimizada y experiencias de compra personalizadas. Las pymes han encontrado en las plataformas digitales una vitrina internacional indispensable."
+    "img": "/NewsWebAngular/img/Comercio.jpg",
+    "texto": "..."
   }
 ]

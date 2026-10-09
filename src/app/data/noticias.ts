@@ -19,7 +19,7 @@ export const noticias: Noticia[] = [
     fecha: '2026-10-01',
     autor: 'Lucía Paredes',
     destacado: true,
-    imagen: '/img/Tecnologia.jpg',
+    imagen: 'img/Tecnologia.jpg',
     contenido: [
       'La apuesta por paneles solares, almacenamiento energético y megaparques eólicos se intensifica en ciudades con políticas climáticas más exigentes.',
       'Analistas señalan que la reducción de costos en baterías y la automatización de la red permitirán que la transición energética sea más accesible para pequeñas y medianas empresas.',
@@ -34,7 +34,7 @@ export const noticias: Noticia[] = [
     fecha: '2026-09-28',
     autor: 'Diego Gómez',
     destacado: true,
-    imagen: '/img/Educacion.jpg',
+    imagen: 'img/Educacion.jpg',
     contenido: [
       'Las universidades ya no ven la IA como un simple asistente, sino como un recurso de apoyo para diseñar rutas de aprendizaje adaptativas.',
       'Professores utilizan sistemas de recomendación para reforzar contenidos complejos y detectar estudiantes con mayor necesidad de tutoría personalizada.',
@@ -49,7 +49,7 @@ export const noticias: Noticia[] = [
     fecha: '2026-09-22',
     autor: 'Mateo Ruiz',
     destacado: false,
-    imagen: '/img/Turismo.jpg',
+    imagen: 'img/Turismo.jpg',
     contenido: [
       'La integración de sistemas predictivos y cámaras inteligentes permite anticipar congestiones y coordinar semáforos en tiempo real.',
       'Además, se impulsan estaciones de bicicletas, transporte público eléctrico y espacios verdes conectados a sensores ambientales.',
@@ -64,7 +64,7 @@ export const noticias: Noticia[] = [
     fecha: '2026-09-17',
     autor: 'Carla Moreno',
     destacado: false,
-    imagen: '/img/Banner.jpg',
+    imagen: 'img/Banner.jpg',
     contenido: [
       'La telemedicina continúa creciendo, especialmente en salud preventiva, seguimiento de tratamientos y atención de pacientes en zonas rurales.',
       'La combinación de registro digital, análisis predictivo y canales seguros facilita diagnósticos más rápidos y continuidad asistencial.',
@@ -79,7 +79,7 @@ export const noticias: Noticia[] = [
     fecha: '2026-09-10',
     autor: 'Sebastián Lira',
     destacado: false,
-    imagen: '/img/Comercio.jpg',
+    imagen: 'img/Comercio.jpg',
     contenido: [
       'Los comercios locales están apostando por redes sociales, pagos electrónicos y promociones segmentadas para llegar a nuevas audiencias sin depender solo del tráfico presencial.',
       'La personalización de la experiencia de compra y la mejora del servicio al cliente se convierten en factores clave para aumentar la fidelización.',
