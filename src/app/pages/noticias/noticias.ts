@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-import { Noticia } from '../../data/noticias';
-import { NoticiasService } from '../../services/noticias.service';
+import { noticias } from '../../data/noticias';
 
 @Component({
   selector: 'app-noticias',
   standalone: true,
-  imports: [RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './noticias.html',
-  styleUrl: './noticias.css',
+  styleUrl: './noticias.css'
 })
-export class Noticias {
-  noticias: Noticia[];
-
-  constructor(private noticiasService: NoticiasService) {
-    this.noticias = this.noticiasService.getNoticias();
-  }
+export class NoticiasComponent {
+  noticias = noticias;
 }
