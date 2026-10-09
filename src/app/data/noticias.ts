@@ -67,4 +67,23 @@ export const noticias: Noticia[] = [
     imagen: '/NewsWebAngular/img/Banner.jpg',
     contenido: [
       'La telemedicina continúa creciendo, especialmente en salud preventiva, seguimiento de tratamientos y atención de pacientes en zonas rurales.',
-      'La combinación de registro digital, an
+      'La combinación de registro digital, análisis predictivo y canales seguros facilita diagnósticos más rápidos y continuidad asistencial.',
+      'La industria insiste en que el enfoque humano debe seguir siendo central aunque la tecnología facilite la gestión.'
+    ]
+  },
+  {
+    id: 'comercio-local',
+    titulo: 'El comercio local impulsa ventas con nuevas estrategias digitales',
+    categoria: 'Comercio',
+    resumen: 'Pequeños negocios fortalecen su presencia online para captar clientes y mejorar la experiencia de compra.',
+    fecha: '2026-09-10',
+    autor: 'Sebastián Lira',
+    destacado: false,
+    imagen: '/NewsWebAngular/img/Comercio.jpg',
+    contenido: [
+      'Los comercios locales están apostando por redes sociales, pagos electrónicos y promociones segmentadas para llegar a nuevas audiencias sin depender solo del tráfico presencial.',
+      'La personalización de la experiencia de compra y la mejora del servicio al cliente se convierten en factores clave para aumentar la fidelización.',
+      'Los expertos destacan que la combinación entre atención humana y herramientas digitales es la estrategia más efectiva para crecer en mercados competitivos.'
+    ]
+  }
+];
