@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #efefef;
+  color: #0f172a;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.4rem 1.4rem 3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.9;
+}

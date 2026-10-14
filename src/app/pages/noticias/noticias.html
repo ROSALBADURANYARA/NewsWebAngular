@@ -1,0 +1,30 @@
+<section class="news-shell">
+  <div class="news-topbar">
+    <div class="news-intro">
+      <h2>{{ soloFavoritos() ? 'Mis favoritos' : 'Últimas Noticias' }}</h2>
+    </div>
+
+    <a
+      class="favorite-button"
+      [class.is-active]="soloFavoritos()"
+      routerLink="/noticias"
+      [queryParams]="{ favoritos: soloFavoritos() ? null : 1 }"
+    >{{ soloFavoritos() ? 'Ver todas' : '★ Ver favoritos' }}</a>
+  </div>
+
+  @if (noticias().length === 0) {
+    <p class="empty-message">
+      Aún no tienes noticias favoritas. Pulsa la ★ de cualquier noticia para guardarla aquí.
+    </p>
+  } @else {
+    <div class="news-grid">
+      @for (noticia of noticias(); track noticia.id) {
+        <app-news-card
+          [noticia]="noticia"
+          [esFavorita]="esFavorita(noticia.id)"
+          (favoritoCambiado)="alternarFavorito($event)"
+        />
+      }
+    </div>
+  }
+</section>

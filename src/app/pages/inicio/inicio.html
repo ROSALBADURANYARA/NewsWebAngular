@@ -1,0 +1,33 @@
+<section class="hero-shell">
+  <div class="hero-visual" aria-label="Portada destacada">
+    <img class="hero-background" src="img/Banner.jpg" alt="" />
+  </div>
+</section>
+
+<section class="headline-section">
+  <div class="headline-box">
+    <div class="headline-text">Mantente informado todos los días</div>
+    <div class="headline-subtext">Las noticias más recientes y de interés general en un solo lugar.</div>
+  </div>
+
+  <div class="hero-button-wrap">
+    <a class="cta" routerLink="/noticias">Explorar noticias</a>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="section-heading">
+    <h3>Últimas Noticias</h3>
+    <a class="favorite-button" routerLink="/noticias" [queryParams]="{ favoritos: 1 }">★ Ver favoritos</a>
+  </div>
+
+  <div class="card-grid">
+    @for (noticia of noticiasDestacadas; track noticia.id) {
+      <app-news-card
+        [noticia]="noticia"
+        [esFavorita]="esFavorita(noticia.id)"
+        (favoritoCambiado)="alternarFavorito($event)"
+      />
+    }
+  </div>
+</section>

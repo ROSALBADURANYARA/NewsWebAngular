@@ -1,0 +1,71 @@
+@if (noticia(); as n) {
+  <article class="article-page">
+    <div class="bread-crumbs">
+      <a routerLink="/">Inicio</a>
+      <span>›</span>
+      <a routerLink="/noticias">Noticias</a>
+      <span>›</span>
+      <span>{{ n.categoria }}</span>
+    </div>
+
+    <div class="article-layout">
+      <div class="article-main">
+        <img class="article-image" [src]="n.imagen" [alt]="n.titulo" />
+
+        <div class="article-content">
+          <span class="pill">{{ n.categoria }}</span>
+          <h2>{{ n.titulo }}</h2>
+          <div class="meta-row">
+            <span>{{ n.autor }}</span>
+            <span>{{ n.fecha }}</span>
+          </div>
+
+          @for (parrafo of n.contenido; track parrafo) {
+            <p>{{ parrafo }}</p>
+          }
+        </div>
+      </div>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card info-card">
+          <div class="sidebar-label">Categoría</div>
+          <div class="sidebar-row">
+            <span class="sidebar-icon">📰</span>
+            <span>{{ n.categoria }}</span>
+          </div>
+
+          <div class="sidebar-label">Fecha de publicación</div>
+          <div class="sidebar-row">
+            <span class="sidebar-icon">🗓️</span>
+            <span>{{ n.fecha }}</span>
+          </div>
+
+          <div class="sidebar-label">Tiempo de lectura</div>
+          <div class="sidebar-row">
+            <span class="sidebar-icon">⏱️</span>
+            <span>{{ tiempoLectura() }} {{ tiempoLectura() === 1 ? 'minuto' : 'minutos' }}</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card share-card">
+          <h3>Compartir</h3>
+          <div class="share-row">
+            <button type="button" aria-label="Compartir en Facebook" (click)="compartir('facebook')">f</button>
+            <button type="button" aria-label="Compartir en LinkedIn" (click)="compartir('linkedin')">in</button>
+            <button type="button" aria-label="Compartir en X" (click)="compartir('x')">x</button>
+          </div>
+        </div>
+
+        <button class="favorite-button" type="button" [class.is-active]="esFavorita()" (click)="toggleFavorito()">
+          {{ esFavorita() ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }}
+        </button>
+      </aside>
+    </div>
+  </article>
+} @else {
+  <section class="empty-state">
+    <h2>Noticia no encontrada</h2>
+    <p>La historia que buscas no está disponible en este momento.</p>
+    <a routerLink="/noticias">Volver al listado</a>
+  </section>
+}

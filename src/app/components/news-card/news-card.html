@@ -1,0 +1,19 @@
+<article class="news-card">
+  <img [src]="noticia().imagen" [alt]="noticia().titulo" loading="lazy" />
+  <div class="news-content">
+    <span class="pill">{{ noticia().categoria }}</span>
+    <h3>{{ noticia().titulo }}</h3>
+    <p>{{ noticia().resumen }}</p>
+    <div class="card-footer">
+      <a [routerLink]="['/detalle', noticia().id]">Leer más →</a>
+      <button
+        class="bookmark-button"
+        type="button"
+        [class.is-active]="esFavorita()"
+        [attr.aria-pressed]="esFavorita()"
+        [attr.aria-label]="esFavorita() ? 'Quitar de favoritos' : 'Guardar en favoritos'"
+        (click)="alternarFavorito()"
+      >★</button>
+    </div>
+  </div>
+</article>

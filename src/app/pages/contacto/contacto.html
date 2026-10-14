@@ -1,0 +1,50 @@
+<section class="contact-shell">
+  <div class="contact-card">
+    <h2>Contáctanos</h2>
+    <p class="subtitle">¿Tienes dudas o sugerencias? Escríbenos un mensaje.</p>
+
+    @if (enviado) {
+      <div class="success-alert" role="status">
+        <span class="alert-icon">✓</span>
+        <p>Mensaje enviado correctamente. ¡Gracias por escribirnos!</p>
+      </div>
+    }
+
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="enviarMensaje(contactForm)" novalidate>
+      <label>
+        <span>Nombre</span>
+        <input type="text" name="nombre" [(ngModel)]="nombre" required #nombreCtrl="ngModel" />
+      </label>
+      @if (nombreCtrl.invalid && (nombreCtrl.touched || intentado)) {
+        <div class="validation-alert" aria-live="polite">
+          <span class="alert-icon">!</span>
+          <p>Escribe tu nombre.</p>
+        </div>
+      }
+
+      <label>
+        <span>Correo electrónico</span>
+        <input type="email" name="correo" [(ngModel)]="correo" required email #correoCtrl="ngModel" />
+      </label>
+      @if (correoCtrl.invalid && (correoCtrl.touched || intentado)) {
+        <div class="validation-alert" aria-live="polite">
+          <span class="alert-icon">!</span>
+          <p>Ingresa un correo válido, por ejemplo nombre&#64;dominio.com.</p>
+        </div>
+      }
+
+      <label>
+        <span>Mensaje</span>
+        <textarea name="mensaje" [(ngModel)]="mensaje" required #mensajeCtrl="ngModel"></textarea>
+      </label>
+      @if (mensajeCtrl.invalid && (mensajeCtrl.touched || intentado)) {
+        <div class="validation-alert" aria-live="polite">
+          <span class="alert-icon">!</span>
+          <p>Escribe tu mensaje.</p>
+        </div>
+      }
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
