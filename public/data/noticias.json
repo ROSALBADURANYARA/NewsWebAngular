@@ -1,0 +1,34 @@
+[
+  {
+    "id": "tecnologia",
+    "tag": "Tecnología",
+    "titulo": "Avances de la Inteligencia Artificial",
+    "resumen": "La inteligencia artificial continúa transformando la educación y la industria a nivel global.",
+    "img": "/NewsWebAngular/img/Tecnologia.jpg",
+    "texto": "..."
+  },
+  {
+    "id": "educacion",
+    "tag": "Educación",
+    "titulo": "Educación Virtual",
+    "resumen": "Nuevas metodologías digitales permiten acceder a una formación flexible y de calidad.",
+    "img": "/NewsWebAngular/img/Educacion.jpg",
+    "texto": "..."
+  },
+  {
+    "id": "turismo",
+    "tag": "Turismo",
+    "titulo": "Turismo Sostenible",
+    "resumen": "Destinos responsables con el medio ambiente que promueven experiencias únicas.",
+    "img": "/NewsWebAngular/img/Turismo.jpg",
+    "texto": "..."
+  },
+  {
+    "id": "comercio",
+    "tag": "Comercio",
+    "titulo": "Comercio Electrónico",
+    "resumen": "Las compras en línea continúan creciendo gracias a la innovación tecnológica.",
+    "img": "/NewsWebAngular/img/Comercio.jpg",
+    "texto": "..."
+  }
+]

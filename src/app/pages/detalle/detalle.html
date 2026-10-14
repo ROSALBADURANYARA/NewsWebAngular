@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @if (noticia(); as n) {
   <article class="article-page">
     <div class="bread-crumbs">
@@ -6,10 +7,27 @@
       <a routerLink="/noticias">Noticias</a>
       <span>›</span>
       <span>{{ n.categoria }}</span>
+=======
+@if (!noticia) {
+  <section class="empty-state">
+    <h2>Noticia no encontrada</h2>
+    <p>La historia que buscas no está disponible en este momento.</p>
+    <a routerLink="/noticias">Volver al listado</a>
+  </section>
+} @else {
+  <article class="article-page">
+    <div class="bread-crumbs">
+      <a routerLink="/noticias">Inicio</a>
+      <span>›</span>
+      <a routerLink="/noticias">Noticia</a>
+      <span>›</span>
+      <span>{{ noticia.categoria }}</span>
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
     </div>
 
     <div class="article-layout">
       <div class="article-main">
+<<<<<<< HEAD
         <img class="article-image" [src]="n.imagen" [alt]="n.titulo" />
 
         <div class="article-content">
@@ -21,6 +39,19 @@
           </div>
 
           @for (parrafo of n.contenido; track parrafo) {
+=======
+        <img class="article-image" [src]="noticia.imagen" [alt]="noticia.titulo" />
+
+        <div class="article-content">
+          <span class="pill">{{ noticia.categoria }}</span>
+          <h2>{{ noticia.titulo }}</h2>
+          <div class="meta-row">
+            <span>{{ noticia.autor }}</span>
+            <span>{{ noticia.fecha }}</span>
+          </div>
+
+          @for (parrafo of noticia.contenido; track parrafo) {
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
             <p>{{ parrafo }}</p>
           }
         </div>
@@ -31,19 +62,31 @@
           <div class="sidebar-label">Categoría</div>
           <div class="sidebar-row">
             <span class="sidebar-icon">📰</span>
+<<<<<<< HEAD
             <span>{{ n.categoria }}</span>
+=======
+            <span>{{ noticia.categoria }}</span>
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
           </div>
 
           <div class="sidebar-label">Fecha de publicación</div>
           <div class="sidebar-row">
             <span class="sidebar-icon">🗓️</span>
+<<<<<<< HEAD
             <span>{{ n.fecha }}</span>
+=======
+            <span>{{ noticia.fecha }}</span>
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
           </div>
 
           <div class="sidebar-label">Tiempo de lectura</div>
           <div class="sidebar-row">
             <span class="sidebar-icon">⏱️</span>
+<<<<<<< HEAD
             <span>{{ tiempoLectura() }} {{ tiempoLectura() === 1 ? 'minuto' : 'minutos' }}</span>
+=======
+            <span>15 minutos</span>
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
           </div>
         </div>
 
@@ -56,12 +99,18 @@
           </div>
         </div>
 
+<<<<<<< HEAD
         <button class="favorite-button" type="button" [class.is-active]="esFavorita()" (click)="toggleFavorito()">
           {{ esFavorita() ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }}
+=======
+        <button class="favorite-button" type="button" [class.is-active]="isFavorita" (click)="toggleFavorito()">
+          {{ isFavorita ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }}
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
         </button>
       </aside>
     </div>
   </article>
+<<<<<<< HEAD
 } @else {
   <section class="empty-state">
     <h2>Noticia no encontrada</h2>
@@ -69,3 +118,7 @@
     <a routerLink="/noticias">Volver al listado</a>
   </section>
 }
+=======
+}
+
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9

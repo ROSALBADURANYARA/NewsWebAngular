@@ -120,6 +120,7 @@
     font-size: 1rem;
   }
 }
+<<<<<<< HEAD
 
 .success-alert {
   display: flex;
@@ -140,3 +141,5 @@
 .success-alert .alert-icon {
   background: #16a34a;
 }
+=======
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9

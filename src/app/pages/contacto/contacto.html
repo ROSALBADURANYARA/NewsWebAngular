@@ -3,6 +3,7 @@
     <h2>Contáctanos</h2>
     <p class="subtitle">¿Tienes dudas o sugerencias? Escríbenos un mensaje.</p>
 
+<<<<<<< HEAD
     @if (enviado) {
       <div class="success-alert" role="status">
         <span class="alert-icon">✓</span>
@@ -43,6 +44,28 @@
           <p>Escribe tu mensaje.</p>
         </div>
       }
+=======
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="enviarMensaje()">
+      <label>
+        <span>Nombre</span>
+        <input type="text" name="nombre" [(ngModel)]="nombre" />
+      </label>
+
+      <label>
+        <span>Correo electrónico</span>
+        <input type="email" name="correo" [(ngModel)]="correo" />
+      </label>
+
+      <div class="validation-alert" aria-live="polite" *ngIf="!correo.includes('@')">
+        <span class="alert-icon">!</span>
+        <p>Incluye un signo “@” en la dirección de correo electrónico.</p>
+      </div>
+
+      <label>
+        <span>Mensaje</span>
+        <textarea name="mensaje" [(ngModel)]="mensaje"></textarea>
+      </label>
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
 
       <button type="submit">Enviar mensaje</button>
     </form>

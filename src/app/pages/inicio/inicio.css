@@ -1,14 +1,28 @@
 .hero-visual {
   position: relative;
   min-height: 440px;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
 }
 
 .hero-visual::before {
   content: "";
   position: absolute;
   inset: 0;
+<<<<<<< HEAD
   background: linear-gradient(90deg, rgba(7, 27, 66, 0.55), rgba(17, 82, 149, 0.2));
+=======
+  background: linear-gradient(
+    90deg,
+    rgba(7, 27, 66, 0.55),
+    rgba(17, 82, 149, 0.2)
+  );
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
   z-index: 1;
   pointer-events: none;
 }
@@ -22,6 +36,7 @@
   object-fit: cover;
 }
 
+<<<<<<< HEAD
 .headline-section {
   text-align: center;
   padding: 2rem 0 1.5rem;
@@ -85,4 +100,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.3rem;
+=======
+.floating-icons {
+  position: relative;
+  z-index: 2;
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
 }

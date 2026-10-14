@@ -1,4 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
+<<<<<<< HEAD
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -14,3 +15,15 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'top' })),
   ],
 };
+=======
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideRouter(routes),
+    provideHttpClient()
+  ]
+};
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9

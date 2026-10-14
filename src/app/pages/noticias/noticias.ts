@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -44,3 +45,21 @@ export class NoticiasComponent {
     this.noticiasService.toggleFavorito(id);
   }
 }
+=======
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+import { noticias } from '../../data/noticias';
+
+@Component({
+  selector: 'app-noticias',
+  standalone: true,
+  imports: [CommonModule, RouterLink],
+  templateUrl: './noticias.html',
+  styleUrl: './noticias.css'
+})
+export class NoticiasComponent {
+  noticias = noticias;
+}
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9

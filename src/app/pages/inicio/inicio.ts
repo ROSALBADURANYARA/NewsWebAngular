@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -11,10 +12,23 @@ import { NoticiasService } from '../../services/noticias.service';
   selector: 'app-inicio',
   standalone: true,
   imports: [RouterLink, NewsCard],
+=======
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { Noticia } from '../../data/noticias';
+import { NoticiasService } from '../../services/noticias.service';
+
+@Component({
+  selector: 'app-inicio',
+  standalone: true,
+  imports: [RouterLink],
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
   templateUrl: './inicio.html',
   styleUrl: './inicio.css',
 })
 export class Inicio {
+<<<<<<< HEAD
   private readonly noticiasService = inject(NoticiasService);
 
   /** Máximo 3 noticias marcadas como destacadas. */
@@ -31,3 +45,15 @@ export class Inicio {
     this.noticiasService.toggleFavorito(id);
   }
 }
+=======
+  noticias: Noticia[];
+
+  constructor(private noticiasService: NoticiasService) {
+    this.noticias = this.noticiasService.getNoticias();
+  }
+
+  get noticiasDestacadas(): Noticia[] {
+    return this.noticias.filter((noticia) => noticia.destacado).slice(0, 3);
+  }
+}
+>>>>>>> b8eebf19f0181d3a9e0b67c3962af6c120b3b9f9
